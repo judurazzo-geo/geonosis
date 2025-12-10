@@ -13,13 +13,13 @@ sap.ui.define([
       // this.getOwnerComponent().setModel(new JSONModel(), "oModelFilters");
     },
 
-	onBeforeRendering: function(){
-		console.error("A problem ocurred!");
-	},
+	// onBeforeRendering: function(){
+	// 	console.error("A problem ocurred!");
+	// },
 
-	onAfterRendering: function(){
-		debugger;
-	},
+	// onAfterRendering: function(){
+	// 	debugger;
+	// },
 
     onListItemPress: function (oEvent) {
       sap.ui.core.BusyIndicator.show();
