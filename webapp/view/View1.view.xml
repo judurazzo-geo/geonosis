@@ -1,0 +1,36 @@
+
+<mvc:View
+    controllerName="geonosis.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+
+    <Page title="{i18n>appTitle}">
+        <content>
+            <!-- <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem name="nombre" label="Name" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input value="{oModelFilters>/nombre}" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar> -->
+            <IconTabBar
+                class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter text="Productos" key="table">
+                        <core:Fragment fragmentName="geonosis.project1.view.ProductsTable" type="XML"/>
+                    </IconTabFilter>
+                    <IconTabFilter text="Formuario" key="form">
+                        <core:Fragment fragmentName="geonosis.project1.view.Form" type="XML"/>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+
+        </content>
+    </Page>
+
+</mvc:View>

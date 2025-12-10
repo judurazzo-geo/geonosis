@@ -1,0 +1,10 @@
+
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f" controllerName="geonosis.project1.controller.App">
+    <App id="app">
+        <f:FlexibleColumnLayout 
+            id="flexId"
+            layout="{layoutMod>/layout}"
+        >
+        </f:FlexibleColumnLayout>
+    </App>
+</mvc:View>

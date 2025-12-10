@@ -1,0 +1,67 @@
+
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    controllerName="geonosis.project1.controller.Detail"
+    displayBlock="true">
+
+    <uxap:ObjectPageLayout
+        id="ObjectPageLayout"
+        showTitleInHeaderContent="true"
+        enableLazyLoading="true">
+
+        <!-- Cabecera -->
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader
+                objectTitle="{data>nombre}"
+                objectSubtitle="${data>precio}"
+                isObjectIconAlwaysVisible="true"
+                isObjectTitleAlwaysVisible="false"
+                isObjectSubtitleAlwaysVisible="false">
+                <uxap:actions>
+                    <Button text="Volver" press=".onNavBack"/>
+                    <Button icon="sap-icon://decline" type="Emphasized" press=".onCloseDetail"/>
+                </uxap:actions>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+
+        <!-- Secciones -->
+        <uxap:sections>
+            <!-- Información general -->
+            <uxap:ObjectPageSection title="Información General">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Datos del Producto">
+                        <uxap:blocks>
+                            <VBox>
+                                <Text text="ID: {id}"/>
+                                <Text text="Nombre: {data>nombre}"/>
+                                <Text text="Estado: {data>estado}"/>
+                                <Text text="Categoría: {data>categoria}"/>
+                                <Text text="Precio: {data>precio}"/>
+                                <Text text="Stock: {data>stock}"/>
+                            </VBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+
+            <!-- Detalle adicional -->
+            <uxap:ObjectPageSection title="Detalle">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Información Adicional">
+                        <uxap:blocks>
+                            <VBox>
+                                <Text text="Descripción: {data>detalle/descripcion}"/>
+                                <Text text="Proveedor: {data>detalle/proveedor}"/>
+                                <Text text="Fecha Ingreso: {data>detalle/fechaIngreso}"/>
+                                <Text text="Ubicación: {data>detalle/ubicacion}"/>
+                                <Text text="Garantía: {data>detalle/garantia}"/>
+                            </VBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>

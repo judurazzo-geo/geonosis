@@ -1,0 +1,57 @@
+<!-- 
+<mvc:View
+    controllerName="geonosis.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    displayBlock="true">
+
+    
+
+</mvc:View> -->
+
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:fb="sap.ui.comp.filterbar">
+    <!-- <Page title="{i18n>appTitle}">
+        <content> -->
+            <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange">
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem name="id" label="Id" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input value="{oModelFilters>/id}" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="nombre" label="Nombre" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input value="{oModelFilters>/nombre}" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="estado" label="Estado" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <Input value="{oModelFilters>/estado}" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar>
+
+            <Table id="tblProducts"
+                items="{data>/items}"
+                >
+                <columns>
+                    <Column><Text text="{i18n>Id}"/></Column>
+                    <Column><Text text="{i18n>Nombre}"/></Column>
+                    <Column><Text text="{i18n>Estado}"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onListItemPress">
+                        <cells>
+                            <Text text="{data>id}"/>
+                            <Text text="{data>nombre}"/>
+                            <Text text="{data>estado}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        <!-- </content>
+    </Page> -->
+    
+</core:FragmentDefinition>
